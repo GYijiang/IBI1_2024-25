@@ -1,5 +1,5 @@
-a = float(input("kg"))
-b = float(input("m"))
+a = float(input("  kg"))
+b = float(input("  m"))
 c = b**2
 d = a / c
 if d < 18.5 :
