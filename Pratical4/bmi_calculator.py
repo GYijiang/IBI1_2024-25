@@ -1,5 +1,5 @@
-a = float(input("kg"))
-b = float(input("m"))
+a = float(input("your weight/kg:"))
+b = float(input("your height/m:"))
 c = b**2
 d = a / c
 #The value of "d" is calculated by dividing the value of "a" by the square of the value of "b".
