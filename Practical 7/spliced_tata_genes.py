@@ -23,7 +23,7 @@ def extract_gene_id(header):
     return match.group(1) if match else header  
 
 def find_tatawaw_sequences(genes_dict):
-    pattern = re.compile(r'TATA[AT][AT]')
+    pattern = re.compile(r'TATA[AT]A[AT]')
     result = {}
     for gene_id, sequence in genes_dict.items():
         matches = pattern.findall(sequence)
