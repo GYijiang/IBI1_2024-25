@@ -29,7 +29,7 @@ def find_tatawaw_sequences(genes_dict):
 def write_fasta(output_path, sequences_dict):
     with open(output_path, 'w') as file:
         for gene_id, sequence in sequences_dict.items():
-            file.write(f'>{gene_id}\n{sequence}\n')  
+            file.write(f'{gene_id}\n{sequence}\n')  
 
 
 input_file = "Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa"        
@@ -44,17 +44,3 @@ matched_sequences = find_tatawaw_sequences(genes)
 write_fasta(output_file, matched_sequences)
 
 print(f" {len(matched_sequences)}{output_file}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
