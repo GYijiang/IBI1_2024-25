@@ -9,7 +9,7 @@ outbreak = np.random.choice(range(100), 2)
 population[outbreak[0], outbreak[1]] = 1  # Set the initial infected person
 
 # Define model parameters
-beta = 0.3  # Infection probability
+beta = 0.3  # Infection probability 
 gamma = 0.05  # Recovery probability
 time_steps = 100  # Number of time points to simulate
 

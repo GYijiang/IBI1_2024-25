@@ -1,4 +1,4 @@
-Hello, my name is Rob.
-I like drinking tea and eating chocolate biscuits.
-I am enjoying teaching IBI1 in person again 
-I am happy that I can push my repo from Visual Studio Code to GitHub
+Hello, my name is Guo Yijiang.
+I like Japanese BBQ and Hunan cuisine.
+I like the cats in school. 
+I am very happy to learn the functions in vscode and python language.
