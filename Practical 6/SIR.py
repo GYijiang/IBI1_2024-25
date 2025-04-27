@@ -16,7 +16,7 @@ def sir_euler(S0, I0, R0, beta, gamma, days):
         inf_list = np.random.choice(range(2), S, p=[1-infected_prob, infected_prob])
         S -= np.sum(inf_list)
         reco_list = np.random.choice(range(2), I, p=[1-gamma, gamma])
-        R += np.sum(reco_list)
+        R += np.sum(reco_list)  
         I += np.sum(inf_list) - np.sum(reco_list)
 
         S_list.append(S)

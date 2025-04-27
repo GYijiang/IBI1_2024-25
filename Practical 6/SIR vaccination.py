@@ -62,5 +62,5 @@ plt.tight_layout()
 plt.savefig("SIR_vaccination_results.png", format="png", bbox_inches='tight')
 plt.show()
 
-# Optional: Print herd immunity threshold estimate
+
 print("Based on the plots, the herd immunity threshold appears to be around 60-70% vaccination.")
