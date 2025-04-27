@@ -8,7 +8,7 @@ if c > f :
     print("c > f")
 else :
     print("f > c")
-#driver code is quiker
+#Plan F takes longer, which means that Plan C has a faster transportation speed. In other words, walking first and then taking the bus takes less time.
 for X in (True, False):
     for Y in (True, False):
         W = X and Y
