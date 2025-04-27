@@ -6,7 +6,7 @@ d = a / c
 if d < 18.5 :
     print("underweight")
 #The value of "d" is less than 18.5, so the string "underweight" is printed.
-if d > 30 :
+elif d > 30 :
     print("obese")
 #The value of "d" is greater than 30, so the string "obese" is printed.
 else :
