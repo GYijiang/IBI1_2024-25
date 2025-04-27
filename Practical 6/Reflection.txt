@@ -1,0 +1,4 @@
+I feel that the second and third codes are very difficult, and there are many pieces that are done with the help of AI. 
+The first code is very interesting. 
+This is a simulation to consider carefully. 
+In many cases, the result is incorrect due to the wrong position of the calculation. I learned a lot during the debugging process. I feel like my ability to write code has improved.
