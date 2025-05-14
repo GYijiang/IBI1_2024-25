@@ -7,7 +7,6 @@ def Drug_dosage_calculator(weight, age):
         print("Sorry,this system is not suit for Adult patient")
         return None
     else :
-
         mg = weight *15
         dosage = mg / 120 * 5
         print(f"The dosage of the drug is {dosage} ml")

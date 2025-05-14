@@ -1,0 +1,18 @@
+length and subcellular localisation	of the human SOD2 protein: 222, Mitochondrion matrix
+
+The	range of percentage	identities in the reported online BLAST	results: 86% ~ 99.5%
+
+The	alignment score	and	percentage of identical	amino acids:
+Human vs Mouse:
+alignment score: 1097.0
+Identity percentage: 90.09%
+
+Human vs Random:
+alignment score: -256.0
+Identity percentage: 3.15%
+
+Mouse vs Random:
+alignment score: -250.0
+Identity percentage: 3.60%
+
+Human SOD2 and murine SOD2 are most closely related

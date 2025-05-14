@@ -1,3 +1,3 @@
 I initially learned about git commands, but I felt a little unfamiliar. 
 But after practicing for a week, I became much more proficient. 
-After downloading vscode, sI felt that it was a very powerful programming software, which could install many extensions and was very convenient in opening folders..
+After downloading vscode, sI felt that it was a very powerful programming software, which could install many extensions and was very convenient in opening folders.
