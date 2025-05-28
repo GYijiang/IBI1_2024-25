@@ -1,0 +1,3 @@
+My Week 3 score was very low in this review because I forgot to do many tasks. After I knew my score, I quickly completed all the missed tasks according to the table.
+Week 4 and Week 5 had relatively high scores, but one or two requirements may not have been completed well. I discussed with my classmates how to improve these tasks.
+Following the requirements of week 3, 4, and 5, I revised all the homework afterwards to make sure my results were the same as what the teacher required.

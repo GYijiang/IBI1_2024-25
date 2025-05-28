@@ -3,19 +3,19 @@ import os
 from Bio.Align import substitution_matrices
 from Bio.SeqIO import read
 
-def read_fasta(file_path):
+def read_fasta(file_path):# Function to read a FASTA file and return the sequence as a string
     with open(file_path, 'r') as f:
         lines = [line.strip() for line in f if not line.startswith('>') and line.strip()]
     seq = ''.join(lines)
     if not seq:
         raise ValueError(f"There are no valid sequences in the file")
     return seq
-
+# Load the BLOSUM62 substitution matrix
 blosum = substitution_matrices.load("BLOSUM62")
-def compare(seq1, seq2, blosum):
+def compare(seq1, seq2, blosum):# Function to compare two sequences using the BLOSUM62 matrix
     score = 0
     identical = 0
-    for a, b in zip(seq1, seq2):
+    for a, b in zip(seq1, seq2):# Iterate through pairs of amino acids in the sequences
         if (a, b) not in blosum: 
             raise ValueError(f"Amino acid pairs  {a}↔{b} are not in the BLOSUM62 matrix!")
         score += blosum[(a, b)]
@@ -23,13 +23,13 @@ def compare(seq1, seq2, blosum):
             identical += 1
     identity_percent = (identical / len(seq1)) * 100
     return score, identity_percent
-if __name__ == "__main__":
+if __name__ == "__main__":# Main function to run the alignment comparisons
 
     required_files = ["SOD2_HUMAN.fasta", "SOD2_MOUSE.fasta", "RANDOM.fasta", "BLOSUM62.txt"]
     for file in required_files:
         if not os.path.exists(file):
             raise FileNotFoundError(f"The required documents {file}were not found")
-
+# Read sequences from the FASTA files
 
     human_seq = read_fasta("SOD2_HUMAN.fasta")
     mouse_seq = read_fasta("SOD2_MOUSE.fasta")
@@ -47,7 +47,7 @@ if __name__ == "__main__":
         print(f"seq1 length: {len(seq1)}, seq2 length: {len(seq2)}")
         try:
             score, identity = compare(seq1, seq2, blosum)
-            print(f"Compare scores: {score}")
+            print(f"alignment score: {score}")
             print(f"Identity percentage: {identity:.2f}%")
         except ValueError as e:
             print(f"error: {e}")

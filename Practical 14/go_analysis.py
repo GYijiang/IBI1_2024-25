@@ -3,7 +3,7 @@ import xml.sax
 from datetime import datetime
 import os
 
-class GOHandler(xml.sax.ContentHandler):
+class GOHandler(xml.sax.ContentHandler):# SAX handler for parsing GO XML data
     def __init__(self):
         self.current_data = ""
         self.namespace = ""
@@ -15,12 +15,12 @@ class GOHandler(xml.sax.ContentHandler):
             'biological_process': {'max': 0, 'terms': []},
             'cellular_component': {'max': 0, 'terms': []}
         }
-
+# SAX handler for parsing GO XML data
     def startElement(self, tag, attrs):
         self.current_data = tag
         if tag == "term":
             self.is_a_count = 0
-
+# Resetting is_a_count for each term
     def characters(self, content):
         if self.current_data == "namespace":
             self.namespace = content.lower().replace(" ", "_")
@@ -28,7 +28,7 @@ class GOHandler(xml.sax.ContentHandler):
             self.term_id = content
         elif self.current_data == "name":
             self.term_name = content
-
+# Storing term name for later comparison
     def endElement(self, tag):
         if tag == "is_a":
             self.is_a_count += 1
@@ -40,7 +40,7 @@ class GOHandler(xml.sax.ContentHandler):
                 elif self.is_a_count == self.results[self.namespace]['max']:
                     self.results[self.namespace]['terms'].append(self.term_name)
         self.current_data = ""
-
+# Resetting current_data after processing each element
 def sax_parser(xml_file):
     print("\n— Starting Analysis with SAX API —")
     start_time = datetime.now()
@@ -56,8 +56,8 @@ def sax_parser(xml_file):
     end_time = datetime.now()
     print(f"— Analysis completed in {round((end_time - start_time).total_seconds(), 2)} seconds —")
     return end_time - start_time
-
-def dom_parser(xml_file):
+# SAX parser for parsing GO XML data
+def dom_parser(xml_file):# DOM parser for parsing GO XML data
     print("\n— Starting Analysis with DOM API —")
     start_time = datetime.now()
     
@@ -69,7 +69,7 @@ def dom_parser(xml_file):
     }
     
     terms = dom.getElementsByTagName('term')
-    for term in terms:
+    for term in terms:# Iterating through each term in the DOM tree
         try:
             namespace = term.getElementsByTagName('namespace')[0].firstChild.data.lower().replace(" ", "_")
             if namespace not in results:
@@ -93,7 +93,7 @@ def dom_parser(xml_file):
     print(f"— Analysis completed in {round((end_time - start_time).total_seconds(), 2)} seconds —")
     return end_time - start_time
 
-if __name__ == "__main__":
+if __name__ == "__main__":# Main function to run the parsers
     xml_file = "go_obo.xml"
     if not os.path.exists(xml_file):
         print(f"Error: File {xml_file} not found!")
